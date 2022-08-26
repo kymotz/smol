@@ -63,7 +63,7 @@ p > code {
 pre {
     color: var(--precolor);
     background: var(--prebgcolor);
-    padding: 3px 7px;
+    padding: 5px 10px;
     border-radius: 2px;
     overflow-x: auto;
 }

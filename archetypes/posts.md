@@ -1,10 +1,10 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
+slug: 
 date: {{ .Date }}
 type: posts
 draft: true
 categories:
-  - default
+  - 杂项
 tags:
-  - default
 ---
