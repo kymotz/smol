@@ -1,113 +1,68 @@
+:root {
+    --bgcolor: #f5f5d5;
+    --lightbgcolor: #d5d5f5;
+    --fontcolor: #111;
+    --lightfontcolor: #444;
+    --precolor: var(--bgcolor);
+    --prebgcolor: var(--fontcolor);
+}
 html {
     overflow-y: scroll
 }
-
-:root {
-    --bgcolor: white;
-    --lightbgcolor: whitesmoke;
-    --fontcolor: #444;
-    --lightfontcolor: gray;
-    --linkcolor: #00e;
-    --visitedcolor: #551a8b;
-    --precolor: white;
-    --prebgcolor: #000;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bgcolor: black;
-        --lightbgcolor: gray;
-        --fontcolor: white;
-        --lightfontcolor: lightgray;
-        --linkcolor: #5bf;
-        --visitedcolor: #ae5ee0;
-        --precolor: white;
-        --prebgcolor: #383838;
-    }
-}
-
 body {
-    max-width: 800px;
-    margin: 10px auto;
+    max-width: 750px;
+    margin: 8px auto;
     padding: 0 10px;
     font: 14px/1.5 monospace;
     color: var(--fontcolor);
     background: var(--bgcolor)
 }
-
-a:link {
-    color: var(--linkcolor)
-}
-
-a:visited {
-    color: var(--visitedcolor)
-}
-
-a:active {
-    color: var(--visitedcolor)
-}
-
 h1,
 h2,
 h3 {
     line-height: 1.2
 }
-
 p > code {
     color: var(--precolor);
-    background: var(--lightfontcolor);
+    background: var(--prebgcolor);
     padding: 1px 2px;
     border-radius: 2px;
 }
-
 pre {
-    color: var(--precolor);
-    background: var(--prebgcolor);
     padding: 5px 10px;
-    border-radius: 2px;
     overflow-x: auto;
 }
-
 article {
     padding: 20px 0;
 }
-
 blockquote {
     color: var(--lightfontcolor);
     border-left: var(--lightfontcolor) solid 3px;
     margin: 14px 14px 14px 2px;
     padding-left: 14px;
-    border-radius: 2px;
     background-color: var(--lightbgcolor);
 }
-
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
 }
-
 figcaption {
     color: var(--lightfontcolor);
     font: 12px/1.5 monospace;
     text-align: center;
 }
-
 figure {
     margin: auto;
 }
-
 table td,th {
     background: var(--lightbgcolor);
-    padding: 0 2px;
-    border-radius: 2px;
+    padding: 0 3px;
 }
-
 img {
     display: block;
-    max-width: 80%;
-    height: auto;
-    margin: auto;
-    border: var(--lightbgcolor) solid 1px;
+    max-width: 70.72%;
+    max-height: 750px;
+    margin: 0 auto;
 }

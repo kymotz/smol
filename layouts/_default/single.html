@@ -1,15 +1,27 @@
 {{ define "main" }}
-	<main>
-		<article>
-			<h1>{{ .Title }}</h1>
-			<b><time>{{ .Date.Format (default "2006-01-02 15:04:05" .Site.Params.dateFmt) }}</time></b>
-		       {{ range .Params.tags }}
-		           <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-        	       {{ end }}
-			<div>
-				{{ .Content }}
-			</div>
-		</article>
-	</main>
+<main>
+    <article>
+        {{ if .Params.banner }} <img style="max-height: 300px;" src="{{ .Params.banner }}" alt="image" /> {{ end }}
+        <h1 id="top">{{ .Title }}</h1>
+        <b><time>{{ .Date.Format (default "2006-01-02 15:04:05" .Site.Params.dateFmt) }}</time></b>
+        {{ range .Params.tags }}
+        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+        {{ end }}
+        <div>
+            {{ if and (gt .WordCount 400 ) (.Params.toc) }}
+                <hr>
+                <aside>
+                    <h3>CONTENTS</h3>
+                    {{.TableOfContents}}
+                </aside>
+                <hr>
+            {{ end }}
+            {{ .Content }}
+            {{ if and (gt .WordCount 400) (eq .Params.type "posts") }}
+                <hr><a href="#top">To top</a> 
+            {{ end }}
+        </div>
+    </article>
+</main>
 {{ partial "sidebar.html" . }}
 {{ end }}
