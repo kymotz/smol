@@ -3,9 +3,12 @@
     <article>
         {{ if .Params.banner }} <img style="max-height: 300px;" src="{{ .Params.banner }}" alt="image" /> {{ end }}
         <h1 id="top">{{ .Title }}</h1>
-        <b><time>{{ .Date.Format (default "2006-01-02 15:04:05" .Site.Params.dateFmt) }}</time></b>
+        <b><time>{{ .Date.Format (default "01.02.2006 15:04" .Site.Params.dateFmt) }}</time></b>
         {{ range .Params.tags }}
         <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+        {{ end }}
+        {{ if .Params.updated }}
+            <time style="float: right;">{{ time.Format (default "01.02.2006 15:04" .Site.Params.dateFmt) .Params.updated }} updated</time>
         {{ end }}
         <div>
             {{ if and (gt .WordCount 400 ) (.Params.toc) }}
