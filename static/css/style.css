@@ -15,7 +15,8 @@ body {
     padding: 0 10px;
     font: 14px/1.5 monospace;
     color: var(--fontcolor);
-    background: var(--bgcolor)
+    background: var(--bgcolor);
+    word-break: break-all;
 }
 h1,
 h2,
