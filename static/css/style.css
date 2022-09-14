@@ -1,13 +1,21 @@
 :root {
-    --bgcolor: #f5f5d5;
-    --lightbgcolor: #d5d5f5;
-    --fontcolor: #111;
-    --lightfontcolor: #444;
+    --bgcolor: White;
+    --lightbgcolor: #EDEDED;
+    --fontcolor: #101010;
+    --lightfontcolor: #404040;
     --precolor: var(--bgcolor);
     --prebgcolor: var(--fontcolor);
 }
-html {
-    overflow-y: scroll
+@media (prefers-color-scheme: dark) {
+    html {
+        filter: invert(1) hue-rotate(.5turn);
+    }
+    html, img { 
+        filter: invert(1) hue-rotate(180deg);  
+    }
+    img {
+        opacity: .75;
+    }
 }
 body {
     max-width: 750px;
@@ -17,31 +25,31 @@ body {
     color: var(--fontcolor);
     background: var(--bgcolor);
     word-break: break-all;
+    overflow-y: scroll;
 }
 h1,
 h2,
 h3 {
-    line-height: 1.2
+    line-height: 1.2;
+}
+article {
+    padding: 20px 0;
 }
 p > code {
     color: var(--precolor);
     background: var(--prebgcolor);
     padding: 1px 2px;
-    border-radius: 2px;
 }
 pre {
     padding: 5px 10px;
     overflow-x: auto;
 }
-article {
-    padding: 20px 0;
-}
 blockquote {
     color: var(--lightfontcolor);
     border-left: var(--lightfontcolor) solid 3px;
-    margin: 14px 14px 14px 2px;
+    margin: 0;
     padding-left: 14px;
-    background-color: var(--lightbgcolor);
+    background: var(--lightbgcolor);
 }
 .center {
     display: block;
