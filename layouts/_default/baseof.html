@@ -11,7 +11,7 @@
     <meta name="generator" content="Elltor" />
     {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
     {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-    <style type=text/css>body {font-family:monospace;}</style>
+    <style type=text/css>body { font-family:monospace }</style>
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
     {{ range .Site.Params.customCSS -}}
     <link rel="stylesheet" href="{{ . | relURL }}?rnd={{ now.Unix }}">

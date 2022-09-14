@@ -3,69 +3,53 @@
     --lightbgcolor: #EDEDED;
     --fontcolor: #101010;
     --lightfontcolor: #404040;
-    --precolor: var(--bgcolor);
-    --prebgcolor: var(--fontcolor);
-}
-@media (prefers-color-scheme: dark) {
-    html {
-        filter: invert(1) hue-rotate(.5turn);
-    }
-    html, img { 
-        filter: invert(1) hue-rotate(180deg);  
-    }
-    img {
-        opacity: .75;
-    }
 }
 body {
     max-width: 750px;
     margin: 8px auto;
     padding: 0 10px;
-    font: 14px/1.5 monospace;
+    font-size: 14px;
     color: var(--fontcolor);
     background: var(--bgcolor);
     word-break: break-all;
-    overflow-y: scroll;
 }
-h1,
-h2,
-h3 {
+@media (prefers-color-scheme: dark) {
+    html, img { filter: invert(1) hue-rotate(180deg); }
+    img { opacity: .75; }
+}
+h1, h2, h3, h4, h5 {
     line-height: 1.2;
 }
 article {
     padding: 20px 0;
 }
 p > code {
-    color: var(--precolor);
-    background: var(--prebgcolor);
+    color: var(--bgcolor);
+    background: var(--fontcolor);
     padding: 1px 2px;
 }
 pre {
     padding: 5px 10px;
     overflow-x: auto;
+    border: var(--lightbgcolor) solid 1px;
 }
 blockquote {
     color: var(--lightfontcolor);
     border-left: var(--lightfontcolor) solid 3px;
-    margin: 0;
+    margin: 0 0;
     padding-left: 14px;
     background: var(--lightbgcolor);
 }
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
 figcaption {
     color: var(--lightfontcolor);
-    font: 12px/1.5 monospace;
+    font-size: 12px;
+    font-style:italic;
     text-align: center;
 }
 figure {
     margin: auto;
 }
-table td,th {
+table td, th {
     background: var(--lightbgcolor);
     padding: 0 3px;
 }
@@ -74,4 +58,10 @@ img {
     max-width: 70.72%;
     max-height: 750px;
     margin: 0 auto;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
