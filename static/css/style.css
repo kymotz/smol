@@ -1,8 +1,8 @@
 :root {
-    --bgcolor: #FAFAFA;
-    --lightbgcolor: #FFF;
-    --fontcolor: #222;
-    --lightfontcolor: #555;
+    --bgcolor: #FDFDFD;
+    --lightbgcolor: WhiteSmoke;
+    --fontcolor: #222222;
+    --lightfontcolor: #555555;
 }
 body {
     max-width: 750px;
