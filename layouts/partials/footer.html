@@ -1,7 +1,7 @@
 <footer>
     <p>&copy; 2020 ~ {{ now.Year }}
     {{- range .Site.Menus.footer }}
-        <a href="{{ .URL }}"><b>{{ .Name }}</b></a>.
+        <a href="{{ .URL }}">{{ .Name }}</a>.
     {{- end }}
     </p>
 </footer>

@@ -1,13 +1,12 @@
 <header>
-    {{ strings.Repeat ( .Site.Title | len | add 6 ) "=" }}<br>
-    == <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> ==<br>
-    {{ strings.Repeat ( .Site.Title | len | add 6 ) "=" }}
-    {{ if .Site.Params.subtitle }} <div style="float: right;"> {{ .Site.Params.subtitle }}</div><br> {{ end }}
+    {{ strings.Repeat ( .Site.Title | len | add 2 ) "~" }}<br>
+    &nbsp;<a href="{{ .Site.BaseURL }}"><b>{{ .Site.Title }}</b></a>{{ if .Site.Params.subtitle }} <div style="float: right;">{{ .Site.Params.subtitle }}</div>{{ end }}<br> 
+    {{ strings.Repeat ( .Site.Title | len | add 2 ) "~" }}
     <nav>
-        <a href="/"><b>Home</b></a>.
+        <a href="/">Home</a>.
         {{ with .Site.Menus.main }}
         {{ range . }}
-        <a href="{{ .URL | relURL }}"><b>{{ .Name }}</b></a>.
+        <a href="{{ .URL | relURL }}">{{ .Name }}</a>.
         {{ end }}
     </nav>
     {{ end }}

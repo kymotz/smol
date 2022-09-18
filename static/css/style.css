@@ -1,14 +1,13 @@
 :root {
-    --bgcolor: #FDFDFD;
-    --lightbgcolor: WhiteSmoke;
-    --fontcolor: #222222;
-    --lightfontcolor: #555555;
+    --bgcolor: #EDEEEF;
+    --lightbgcolor: whitesmoke;
+    --fontcolor: #111;
+    --lightfontcolor: #444;
 }
 body {
     max-width: 750px;
     margin: 8px auto;
     padding: 0 10px;
-    font-size: 14px;
     color: var(--fontcolor);
     background: var(--bgcolor);
     word-break: break-all;
@@ -31,7 +30,7 @@ p > code {
 pre {
     padding: 5px 10px;
     overflow-x: auto;
-    border: var(--lightbgcolor) solid 1px;
+    border: lightgray solid 1px;
 }
 blockquote {
     color: var(--lightfontcolor);
