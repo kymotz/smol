@@ -1,12 +1,14 @@
 :root {
-    --bgcolor: #EDEEEF;
-    --lightbgcolor: whitesmoke;
-    --fontcolor: #111;
-    --lightfontcolor: #444;
+    --bgcolor: #FFFFFF;
+    --lightbgcolor: #EFEFEF;
+    --fontcolor: #000000;
+    --lightfontcolor: #333333;
 }
 body {
+    font:14px monospace, Menlo, Monaco, serif;
     max-width: 750px;
-    margin: 8px auto;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 10px;
     color: var(--fontcolor);
     background: var(--bgcolor);

@@ -6,19 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Elltor"/>
-    <meta name="keywords" content="elltor,Elltor,刘启春"/>
-    <meta name="description" content="刘启春的个人博客。"/>
+    <meta name="keywords" content="Elltor,elltor,刘启春"/>
+    <meta name="description" content="刘启春的个人博客"/>
     <meta name="generator" content="Elltor"/>
-    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
-    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-    <style type=text/css>body { font:14px monospace, Menlo, Monaco, serif }</style>
-    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
-    {{ range .Site.Params.customCSS -}}
-    <link rel="stylesheet" href="{{ . | relURL }}?rnd={{ now.Unix }}">
-    {{- end }}
     {{ with .OutputFormats.Get "RSS" -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
     {{- end }}
+    <style type=text/css>:root{--bgcolor:#fff;--lightbgcolor:#efefef;--fontcolor:#000;--lightfontcolor:#333}body{margin-right:auto;margin-left:auto;padding:0 10px;max-width:750px;background:var(--bgcolor);color:var(--fontcolor);font:14px monospace,Menlo,Monaco,serif;word-break:break-all}@media (prefers-color-scheme:dark){html,img{filter:invert(1) hue-rotate(180deg)}img{opacity:.75}}h1,h2,h3,h4,h5{line-height:1.2}article{padding:20px 0}p>code{padding:1px 2px;background:var(--fontcolor);color:var(--bgcolor)}pre{overflow-x:auto;padding:5px 10px;border:1px solid #d3d3d3}blockquote{margin:0;padding-left:14px;border-left:3px solid var(--lightfontcolor);background:var(--lightbgcolor)}blockquote,figcaption{color:var(--lightfontcolor)}figcaption{text-align:center;font-style:italic;font-size:12px}figure{margin:auto}table td,th{padding:0 3px;background:var(--lightbgcolor)}img{margin:0 auto;max-width:70.72%;max-height:750px}.center,img{display:block}.center{margin-right:auto;margin-left:auto;width:100%}</style>
+    <!-- <link rel="stylesheet" href="{{ "css/style.css" | relURL }}"> -->
 </head>
 <body>
     {{ partial "header" . }}
