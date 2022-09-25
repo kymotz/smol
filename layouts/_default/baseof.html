@@ -12,20 +12,105 @@
     {{ with .OutputFormats.Get "RSS" -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
     {{- end }}
-    <style type=text/css> :root{--bgcolor:#FFF;--lightbgcolor:#EFEFEF;--fontcolor:#000;--lightfontcolor:#444}body{margin-right:auto;margin-left:auto;padding:0 10px;max-width:750px;background:var(--bgcolor);color:var(--fontcolor);font:15px "Lucida Console",Courier,monospace,"宋体",serif;word-break:break-all}body p{line-height:1.5}a{text-decoration:none}a:hover{text-decoration:underline}article{padding:20px 0}p>code{padding:1px 2px;background:var(--fontcolor);color:var(--bgcolor)}pre{overflow-x:auto;padding:5px 10px;border:#d3d3d3 solid 1px}blockquote{margin:0 0;padding-left:14px;border-left:var(--lightfontcolor) solid 3px;background:var(--lightbgcolor);color:var(--lightfontcolor)}figcaption{color:var(--lightfontcolor);text-align:center;font-style:italic}figure{margin:auto}table td,th{padding:0 3px;background:var(--lightbgcolor)}img{display:block;margin:0 auto;max-width:70.72%;max-height:750px}.center{display:block;margin-right:auto;margin-left:auto;width:100%}@media (prefers-color-scheme:dark){html,img{filter:invert(1) hue-rotate(180deg)}img{opacity:.7}} </style>
+    <style type=text/css>
+        :root {
+            --bgcolor: #F6F6F6;
+            --light-bgcolor: #FFF;
+            --font-color: #000;
+            --light-font-color: #444;
+            --border-color: lightgray;
+            --link-color: #2222DD;
+        }
+        body {
+            font: 14px Verdana, Geneva, "PingFang SC", "微软雅黑", "黑体", sans-serif;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 .5em;
+            color: var(--font-color);
+            background: var(--bgcolor);
+            word-break: break-all;
+        }
+        h1,h2,h3 { font-size: 1.1em }
+        h4,h5 { font-size: 1em; font-weight: normal;}
+        h6 { font-size: .8em; font-weight: normal;}
+        body p { line-height: 1.5; margin: .5em 0;}
+        a:link {color: var(--link-color);}
+        a { text-decoration : none;}
+        a:hover {
+            text-decoration : underline;
+        }
+        article {
+            padding: .2em 0;
+        }
+        p > code {
+            color: var(--bgcolor);
+            background: var(--font-color);
+            padding: 1px 2px;
+            font-family: "Lucida Console", Courier, monospace;
+        }
+        pre {
+            padding: .5em 1em;
+            overflow-x: auto;
+            border: var(--border-color) solid 1px;
+        }
+        blockquote {
+            color: var(--light-font-color);
+            margin: 1em 0;
+            padding: 0 1em;
+            background: var(--light-bgcolor);
+            border-left: var(--light-font-color) solid 3px;
+            border-top: var(--border-color) solid 1px;
+            border-bottom: var(--border-color) solid 1px;
+            border-right: var(--border-color) solid 1px;
+        }
+        figcaption {
+            color: var(--light-font-color);
+            font-style:italic;
+            text-align: center;
+        }
+        figure {
+            margin: auto;
+        }
+
+        table {
+            min-width: 100%;
+        }
+        table td, th {
+            background: var(--light-bgcolor);
+            border: var(--border-color) solid 1px;
+        }
+        img {
+            display: block;
+            max-width: 70.72%;
+            max-height: 750px;
+            margin: 0 auto;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+        .summary-title::before {
+            content: "» ";
+        }
+        header {
+            margin-bottom: .5em;
+        }
+        footer {
+            margin-top: .5em;
+        }
+        @media (prefers-color-scheme: dark) {
+            html, img { filter: invert(1) hue-rotate(180deg); }
+            img { opacity: .7; }
+        }
+    </style>
     <!-- <link rel="stylesheet" href="{{ "css/style.css" | relURL }}"> -->
 </head>
 <body>
     {{ partial "header" . }}
     {{ block "main" . }}{{ end }}
     {{ partial "footer" . }}
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PBGXH0LZ2G"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-PBGXH0LZ2G');
-    </script>
 </body>
 </html>

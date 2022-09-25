@@ -1,59 +1,69 @@
 :root {
-    --bgcolor: #FFF;
-    --lightbgcolor: #EFEFEF;
-    --fontcolor: #000;
-    --lightfontcolor: #444;
+    --bgcolor: #F6F6F6;
+    --light-bgcolor: #FFF;
+    --font-color: #000;
+    --light-font-color: #444;
+    --border-color: lightgray;
+    --link-color: #2222DD;
 }
 body {
-    font:15px "Lucida Console", Courier, monospace, "宋体", serif;
+    font: 14px Verdana, Geneva, "PingFang SC", "微软雅黑", "黑体", sans-serif;
     max-width: 750px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 10px;
-    color: var(--fontcolor);
+    padding: 0 .5em;
+    color: var(--font-color);
     background: var(--bgcolor);
     word-break: break-all;
 }
-body p {
-    line-height: 1.5;
-}
-a {
-    text-decoration : none;
-}
+h1,h2,h3 { font-size: 1.1em }
+h4,h5 { font-size: 1em; font-weight: normal;}
+h6 { font-size: .8em; font-weight: normal;}
+body p { line-height: 1.5; margin: .5em 0;}
+a:link {color: var(--link-color);}
+a { text-decoration : none;}
 a:hover {
     text-decoration : underline;
 }
 article {
-    padding: 20px 0;
+    padding: .2em 0;
 }
 p > code {
     color: var(--bgcolor);
-    background: var(--fontcolor);
+    background: var(--font-color);
     padding: 1px 2px;
+    font-family: "Lucida Console", Courier, monospace;
 }
 pre {
-    padding: 5px 10px;
+    padding: .5em 1em;
     overflow-x: auto;
-    border: lightgray solid 1px;
+    border: var(--border-color) solid 1px;
 }
 blockquote {
-    color: var(--lightfontcolor);
-    border-left: var(--lightfontcolor) solid 3px;
-    margin: 0 0;
-    padding-left: 14px;
-    background: var(--lightbgcolor);
+    color: var(--light-font-color);
+    margin: 1em 0;
+    padding: 0 1em;
+    background: var(--light-bgcolor);
+    border-left: var(--light-font-color) solid 3px;
+    border-top: var(--border-color) solid 1px;
+    border-bottom: var(--border-color) solid 1px;
+    border-right: var(--border-color) solid 1px;
 }
 figcaption {
-    color: var(--lightfontcolor);
+    color: var(--light-font-color);
     font-style:italic;
     text-align: center;
 }
 figure {
     margin: auto;
 }
+
+table {
+    min-width: 100%;
+}
 table td, th {
-    background: var(--lightbgcolor);
-    padding: 0 3px;
+    background: var(--light-bgcolor);
+    border: var(--border-color) solid 1px;
 }
 img {
     display: block;
@@ -66,6 +76,15 @@ img {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+}
+.summary-title::before {
+    content: "» ";
+}
+header {
+    margin-bottom: .5em;
+}
+footer {
+    margin-top: .5em;
 }
 @media (prefers-color-scheme: dark) {
     html, img { filter: invert(1) hue-rotate(180deg); }
