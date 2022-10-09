@@ -1,9 +1,9 @@
 :root {
-    --bgcolor: #F6F6F6;
+    --bgcolor: #F7F6F4;
     --light-bgcolor: #FFF;
-    --font-color: #000;
-    --light-font-color: #444;
-    --border-color: lightgray;
+    --font-color: #111;
+    --light-font-color: #555;
+    --border-color: #D3D3D3;
     --link-color: #2222DD;
 }
 body {

@@ -7,18 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Elltor"/>
     <meta name="keywords" content="Elltor,elltor,刘启春"/>
-    <meta name="description" content="刘启春的个人博客"/>
+    <meta name="description" content="刘启春（Elltor）的个人博客。"/>
     <meta name="generator" content="Elltor"/>
     {{ with .OutputFormats.Get "RSS" -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
     {{- end }}
     <style type=text/css>
         :root {
-            --bgcolor: #F6F6F6;
+            --bgcolor: #F7F6F4;
             --light-bgcolor: #FFF;
-            --font-color: #000;
-            --light-font-color: #444;
-            --border-color: lightgray;
+            --font-color: #111;
+            --light-font-color: #555;
+            --border-color: #D3D3D3;
             --link-color: #2222DD;
         }
         body {
