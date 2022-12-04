@@ -1,113 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ .Title }}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="Elltor"/>
-    <meta name="keywords" content="Elltor,elltor,刘启春"/>
-    <meta name="description" content="刘启春（Elltor）的个人博客。"/>
+    <meta name="keywords" content="elltor,Elltor,刘启春"/>
+    <meta name="description" content="刘启春的博客。"/>
     <meta name="generator" content="Elltor"/>
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="{{"css/style.css" | relURL }}">
     {{ with .OutputFormats.Get "RSS" -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
     {{- end }}
-    <style type=text/css>
-        :root {
-            --bgcolor: #F7F6F4;
-            --light-bgcolor: #FFF;
-            --font-color: #111;
-            --light-font-color: #555;
-            --border-color: #D3D3D3;
-            --link-color: #2222DD;
-        }
-        body {
-            font: 14px Verdana, Geneva, "PingFang SC", "微软雅黑", "黑体", sans-serif;
-            max-width: 750px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 0 .5em;
-            color: var(--font-color);
-            background: var(--bgcolor);
-            word-break: break-all;
-        }
-        h1,h2,h3 { font-size: 1.1em }
-        h4,h5 { font-size: 1em; font-weight: normal;}
-        h6 { font-size: .8em; font-weight: normal;}
-        body p { line-height: 1.5; margin: .5em 0;}
-        a:link {color: var(--link-color);}
-        a { text-decoration : none;}
-        a:hover {
-            text-decoration : underline;
-        }
-        article {
-            padding: .2em 0;
-        }
-        p > code {
-            color: var(--bgcolor);
-            background: var(--font-color);
-            padding: 1px 2px;
-            font-family: "Lucida Console", Courier, monospace;
-        }
-        pre {
-            padding: .5em 1em;
-            overflow-x: auto;
-            border: var(--border-color) solid 1px;
-        }
-        blockquote {
-            color: var(--light-font-color);
-            margin: 1em 0;
-            padding: 0 1em;
-            background: var(--light-bgcolor);
-            border-left: var(--light-font-color) solid 3px;
-            border-top: var(--border-color) solid 1px;
-            border-bottom: var(--border-color) solid 1px;
-            border-right: var(--border-color) solid 1px;
-        }
-        figcaption {
-            color: var(--light-font-color);
-            text-align: center;
-        }
-        figure {
-            margin: auto;
-            font-size: .8em;
-        }
-        table {
-            min-width: 100%;
-        }
-        table td, th {
-            background: var(--light-bgcolor);
-            border: var(--border-color) solid 1px;
-        }
-        img {
-            display: block;
-            max-width: 70.72%;
-            max-height: 750px;
-            margin: 0 auto;
-        }
-        .center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 100%;
-        }
-        .summary-title::before {
-            content: "» ";
-        }
-        header {
-            margin-bottom: .5em;
-        }
-        footer {
-            margin-top: .5em;
-        }
-        @media (prefers-color-scheme: dark) {
-            html, img { filter: invert(1) hue-rotate(180deg); }
-            img { opacity: .7; }
-        }
-    </style>
-    <!-- <link rel="stylesheet" href="{{ "css/style.css" | relURL }}"> -->
 </head>
-<body>
+<body id="body">
     {{ partial "header" . }}
     {{ block "main" . }}{{ end }}
     {{ partial "footer" . }}

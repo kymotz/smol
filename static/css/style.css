@@ -7,7 +7,6 @@
     --link-color: #2222DD;
 }
 body {
-    font: 14px Verdana, Geneva, "PingFang SC", "微软雅黑", "黑体", sans-serif;
     max-width: 750px;
     margin-left: auto;
     margin-right: auto;
@@ -15,6 +14,7 @@ body {
     color: var(--font-color);
     background: var(--bgcolor);
     word-break: break-all;
+    font: 14px Verdana, Geneva, "PingFang SC", "微软雅黑", "黑体", sans-serif;
 }
 h1,h2,h3 { font-size: 1.1em }
 h4,h5 { font-size: 1em; font-weight: normal;}
@@ -22,12 +22,8 @@ h6 { font-size: .8em; font-weight: normal;}
 body p { line-height: 1.5; margin: .5em 0;}
 a:link {color: var(--link-color);}
 a { text-decoration : none;}
-a:hover {
-    text-decoration : underline;
-}
-article {
-    padding: .2em 0;
-}
+a:hover { text-decoration : underline; }
+article { padding: .2em 0; }
 p > code {
     color: var(--bgcolor);
     background: var(--font-color);
@@ -57,9 +53,6 @@ figure {
     margin: auto;
     font-size: .8em;
 }
-table {
-    min-width: 100%;
-}
 table td, th {
     background: var(--light-bgcolor);
     border: var(--border-color) solid 1px;
@@ -68,7 +61,8 @@ img {
     display: block;
     max-width: 70.72%;
     max-height: 750px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 .center {
     display: block;
@@ -79,12 +73,8 @@ img {
 .summary-title::before {
     content: "» ";
 }
-header {
-    margin-bottom: .5em;
-}
-footer {
-    margin-top: .5em;
-}
+header { margin-bottom: .5em; }
+footer { margin-top: .5em; }
 @media (prefers-color-scheme: dark) {
     html, img { filter: invert(1) hue-rotate(180deg); }
     img { opacity: .7; }
