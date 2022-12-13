@@ -23,7 +23,6 @@ body p { line-height: 1.5; margin: .5em 0;}
 a:link {color: var(--link-color);}
 a { text-decoration : none;}
 a:hover { text-decoration : underline; }
-article { padding: .2em 0; }
 p > code {
     color: var(--bgcolor);
     background: var(--font-color);
