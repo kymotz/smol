@@ -3,23 +3,27 @@
     --light-bgcolor: #FFF;
     --font-color: #111;
     --light-font-color: #555;
-    --border-color: #D3D3D3;
+    --border-color: lightgray;
     --link-color: #2222DD;
 }
 body {
     max-width: 750px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 .5em;
+    padding: 20px 30px;
     color: var(--font-color);
     background: var(--bgcolor);
     word-break: break-all;
     font: 14px Verdana, Geneva, "PingFang SC", "微软雅黑", "黑体", sans-serif;
+    border: lightgray solid 1px;
+    box-shadow: 0 0 20px lightgray;
 }
-h1,h2,h3 { font-size: 1.1em }
-h4,h5 { font-size: 1em; font-weight: normal;}
-h6 { font-size: .8em; font-weight: normal;}
-body p { line-height: 1.5; margin: .5em 0;}
+h1 { font-size: 1.2em; }
+h2 { font-size: 1.15em; }
+h3 { font-size: 1.1em; }
+h4,h5 { font-size: 1em; font-weight: normal; }
+h6 { font-size: .8em; font-weight: normal; }
+body p { line-height: 1.5; margin: .5em 0; }
 a:link {color: var(--link-color);}
 a { text-decoration : none;}
 a:hover { text-decoration : underline; }
@@ -40,9 +44,8 @@ blockquote {
     padding: 0 1em;
     background: var(--light-bgcolor);
     border-left: var(--light-font-color) solid 3px;
-    border-top: var(--border-color) solid 1px;
-    border-bottom: var(--border-color) solid 1px;
-    border-right: var(--border-color) solid 1px;
+    padding-top: .5em;
+    padding-bottom: .5em;
 }
 figcaption {
     color: var(--light-font-color);
@@ -69,11 +72,22 @@ img {
     margin-right: auto;
     width: 100%;
 }
-.summary-title::before {
-    content: "» ";
+.summary-title {
+    background: lightgray;
+    border-left: gray solid 3px;
+    padding-left: 3px; 
 }
-header { margin-bottom: .5em; }
-footer { margin-top: .5em; }
+header { 
+    text-align: left; 
+    padding: 1em 0; 
+    color: var(--light-font-color);
+}
+footer { 
+    padding-top: 2em;
+    padding-bottom: 1em;
+    text-align: right; 
+    color: var(--light-font-color);
+}
 @media (prefers-color-scheme: dark) {
     html, img { filter: invert(1) hue-rotate(180deg); }
     img { opacity: .7; }

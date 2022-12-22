@@ -3,7 +3,8 @@
         <a href="{{ .Site.BaseURL }}"><b>{{ .Site.Title }}</b></a>
         {{ with .Site.Menus.main }}
             {{ range . }}
-            <b>·</b> <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+            <b>·</b>
+            <a href="{{ .URL | relURL }}"><b>{{ .Name }}</b></a>
             {{ end }}
         {{ end }}
         {{ if .Site.Params.subtitle }} <div style="float: right;">{{ .Site.Params.subtitle }}</div>{{ end }}

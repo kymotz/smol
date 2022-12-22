@@ -1,5 +1,5 @@
 <footer>
-    &copy; {{ now.Year }} {{ .Site.Title }}
+    &copy;{{ now.Year }} {{ .Site.Title }}
     {{- range .Site.Menus.footer }}
     <b>·</b> <a href="{{ .URL }}" target="_blank">{{ .Name }}</a>
     {{- end }}
