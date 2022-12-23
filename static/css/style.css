@@ -10,16 +10,16 @@ html {
     background: var(--bgcolor);
 }
 body {
-    max-width: 750px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 800px;
+    box-sizing: border-box;
+    margin: 15px auto;
     padding: 20px 30px;
     color: var(--font-color);
     background: var(--bgcolor);
     word-break: break-all;
     font: 16px Verdana, Geneva, "PingFang SC", "微软雅黑", "黑体", sans-serif;
     border: lightgray solid 1px;
-    box-shadow: 0 0 20px lightgray;
+    box-shadow: 0 0 15px lightgray;
 }
 h1 { font-size: 1.2em; }
 h2 { font-size: 1.15em; }
@@ -46,7 +46,7 @@ blockquote {
     margin: 1em 0;
     padding: 0 1em;
     background: var(--light-bgcolor);
-    border-left: var(--light-font-color) solid 3px;
+    border-left: gray solid 3px;
     padding-top: .5em;
     padding-bottom: .5em;
 }
@@ -90,6 +90,20 @@ footer {
     padding-bottom: 1em;
     text-align: right; 
     color: var(--light-font-color);
+}
+.pagination {
+    color: var(--light-font-color);
+}
+@media screen and (max-width: 800px) {
+    body {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 550px) {
+    body {
+        padding: 0 10px;
+    }
 }
 /* @media (prefers-color-scheme: dark) {
     html, img { filter: invert(1) hue-rotate(180deg); }
