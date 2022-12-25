@@ -98,6 +98,7 @@ footer {
     body {
         margin-top: 0;
         margin-bottom: 0;
+        border: none;
     }
 }
 @media screen and (max-width: 550px) {
