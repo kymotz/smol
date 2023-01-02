@@ -57,6 +57,7 @@ figcaption {
 figure {
     margin: auto;
     font-size: .8em;
+    padding: 1em 0;
 }
 table td, th {
     background: var(--light-bgcolor);
