@@ -44,6 +44,7 @@ blockquote {
     font-family: palatino linotype, book antiqua,Palatino, stkaiti, kaiti, 楷体, simkai, dfkai-sb, nsimsun, serif;
     padding: .1px 1em;
     background: var(--light-bgcolor);
+    border-radius: .5em;
 }
 img {
     display: block;
