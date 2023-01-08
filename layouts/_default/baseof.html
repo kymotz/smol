@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>{{ .Title }}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="keywords" content="elltor,Elltor,刘启春"/>
     <meta name="description" content="刘启春的博客。"/>
     <meta name="generator" content="Elltor"/>
-    <title>{{ .Title }}</title>
+    <style>
+        body { max-width: 800px; margin: 15px auto; }
+        img { display: block; max-width: 70.72%; max-height: 750px; margin: .5em auto; }
+        figcaption { text-align: center; }
+    </style>
     <link rel="stylesheet" href="{{"css/style.css" | relURL }}">
     {{ with .OutputFormats.Get "RSS" -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}

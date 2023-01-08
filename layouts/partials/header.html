@@ -1,10 +1,9 @@
 <header>
     <nav>
-        <h1 style="font-size: inherit; display:inline"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+        <h1 style="font-size: inherit; display:inline"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1> 
         {{ with .Site.Menus.main }}
             {{ range . }}
-            <b> · </b>
-            <a href="{{ .URL | relURL }}"><b>{{ .Name }}</b></a>
+            <b>·</b> <a href="{{ .URL | relURL }}"><b>{{ .Name }}</b></a> 
             {{ end }}
         {{ end }}
         {{ if .Site.Params.subtitle }} <div style="float: right; font-size: .875em; padding: 1px 0;">{{ .Site.Params.subtitle }}</div>{{ end }}

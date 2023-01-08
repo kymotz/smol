@@ -52,13 +52,13 @@ img {
     margin: .5em auto;
 }
 figure {
-    margin: auto;
-    font-size: .8em;
+    margin: 0 auto;
     padding: 1em 0;
 }
 figcaption {
     color: var(--light-font-color);
     text-align: center;
+    font-size: .875em;
 }
 header { 
     text-align: left; 
