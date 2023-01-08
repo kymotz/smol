@@ -90,3 +90,15 @@ Have you found a bug or got an idea for a new feature? Feel free to use the [iss
 ## License
 
 This theme is released under the [MIT license](https://github.com/colorchestra/smol/blob/master/LICENSE).
+
+## Dark Theme
+
+add those code to `static/css/style.css`.
+
+```css
+@media (prefers-color-scheme: dark) {
+    html, img { filter: invert(1) hue-rotate(180deg); }
+    img { opacity: .7; }
+    body { box-shadow: none;}
+}
+```
