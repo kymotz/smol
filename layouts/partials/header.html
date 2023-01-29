@@ -6,6 +6,6 @@
             <b> · </b> <a href="{{ .URL | relURL }}"><strong>{{ .Name }}</strong></a> 
             {{ end }}
         {{ end }}
-        {{ if .Site.Params.subtitle }} <div style="float: right; font-size: .875em; padding: 1px 0;">{{ .Site.Params.subtitle }}</div>{{ end }}
+        {{ if .Site.Params.subtitle }} <div style="float: right;">{{ .Site.Params.subtitle }}</div>{{ end }}
     </nav>
 </header>
