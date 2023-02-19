@@ -5,7 +5,7 @@
         <h1>{{ .Title }}</h1>
         <i><time>{{ .Date.Format (default "01.02.2006" .Site.Params.dateFmt) }}</time></i>
         {{ range .Params.tags }}
-            <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a>
+            <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">#{{ . }}</a>
         {{ end }}
         <span style="float: right;">
             {{ if .Params.updated }}[{{ time.Format ("2006-01-02") .Params.updated }}·更新]{{ end }}
