@@ -5,7 +5,7 @@
     --light-font-color: #555;
     --border-color: lightgray;
 }
-html { background: var(--bgcolor);}
+html { background: var(--bgcolor)}
 body {
     color: var(--font-color);
     font-size: 16px;
@@ -71,7 +71,6 @@ footer {
     padding-bottom: 1em;
     text-align: right; 
     color: var(--light-font-color);
-    font-size: .875em;
 }
 .center {
     display: block;

@@ -25,10 +25,14 @@
             {{ .Content }}
         </div>
     </article>
-    {{ if and (gt .WordCount 600) (eq .Params.type "posts") }}
+    <p>
         <hr>
-        <a href="#body" style="float: right;">Top&uarr;</a> 
-    {{ end }}
+        本站没有评论系统，但接受<a href="javascript:(function(){location.href=decodeURIComponent(escape(window.atob('{{ print "mailto:" .Site.Params.email "?subject=【" .Site.Title "】" .Title | base64Encode}}')))})()">邮件形式</a>的评论和交流。
+        {{ if and (gt .WordCount 600) (eq .Params.type "posts") }}
+
+            <a href="#body" style="float: right;">Top&uarr;</a> 
+        {{ end }}
+    </p>
 </main>
 {{ partial "sidebar.html" . }}
 {{ end }}
