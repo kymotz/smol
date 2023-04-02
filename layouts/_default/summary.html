@@ -10,7 +10,7 @@
         {{ if .Params.banner }} <img style="max-width: 256px; max-height: 126px; float: right;margin: 0 0 1em 1em;" src="{{ .Params.banner }}" alt="image"/>{{ end }}
         {{ .Summary }}
     </div>
-    {{ if .Truncated }}
+    {{ if or .Truncated .Params.summary }}
         <p style="text-align: right;"><a href="{{ .Permalink }}">&raquo; 阅读全文 <b>·</b> {{ .Title }}</a></p>
     {{ end }}
 </article>
