@@ -1,11 +1,11 @@
 <aside>
     <div>
         <div>
-            <h3>最近发布</h3>
+            <h3>最新发布</h3>
         </div>
         <div>
             <ul>
-                {{ range first 5 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+                {{ range first 6 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
                 <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
                 {{ end }}
             </ul>

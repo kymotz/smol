@@ -1,11 +1,11 @@
 :root {
-    --bgcolor: #F7F6F4;
+    --bgcolor: #f9f8f6;
     --light-bgcolor: #FFF;
     --font-color: #000;
     --light-font-color: #555;
     --border-color: lightgray;
 }
-html { background: var(--bgcolor)}
+html { background: var(--bgcolor) }
 body {
     color: var(--font-color);
     font-size: 16px;
@@ -15,7 +15,7 @@ body {
     padding: 20px 40px;
     border: lightgray solid 1px;
     background: var(--bgcolor);
-    box-shadow: 0 0 15px lightgray;
+    box-shadow: 0 0 10px lightgray;
     box-sizing: border-box;
 }
 strong, b { font-weight: 700; }
@@ -44,7 +44,7 @@ blockquote {
     font-family: palatino linotype, book antiqua,Palatino, stkaiti, kaiti, 楷体, simkai, dfkai-sb, nsimsun, serif;
     padding: .1px 1em;
     background: var(--light-bgcolor);
-    border-radius: .5em;
+    border: var(--border-color) solid 1px;
 }
 img {
     display: block;
@@ -61,16 +61,10 @@ figcaption {
     text-align: center;
     font-size: .875em;
 }
-header { 
-    text-align: left; 
-    padding: 1em 0; 
-    color: var(--light-font-color);
-}
+header { padding: 1em 0 }
 footer { 
-    padding-top: 2em;
-    padding-bottom: 1em;
+    padding: 1em 0;
     text-align: right; 
-    color: var(--light-font-color);
 }
 .center {
     display: block;
@@ -80,11 +74,8 @@ footer {
 }
 .summary-title {
     background: lightgray;
-    border-left: gray solid 3px;
-    padding-left: 4px; 
-}
-.pagination {
-    color: var(--light-font-color);
+    border-left: gray solid 4px;
+    padding-left: 6px; 
 }
 @media screen and (max-width: 800px) {
     body {
