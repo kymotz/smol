@@ -18,10 +18,12 @@ body {
     box-shadow: 0 0 10px lightgray;
     box-sizing: border-box;
 }
-strong, b { font-weight: 700; }
-a { text-decoration: none; }
-a:hover { text-decoration : underline; }
-li {line-height: 1.5em;}
+h1 { font-size: 1.5em }
+h2 {font-size: 1.35em;}
+strong, b { font-weight: 700 }
+a { text-decoration: none }
+a:hover { text-decoration : underline }
+li { line-height: 1.5em }
 ul li { list-style-type: square; }
 p { line-height: 1.75em; margin: 1em 0; }
 p > code {
