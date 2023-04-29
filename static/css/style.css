@@ -1,21 +1,17 @@
 :root {
-    --bgcolor: #f9f8f6;
-    --light-bgcolor: #FFF;
-    --font-color: #000;
+    --font-color: #333;
     --light-font-color: #555;
     --border-color: lightgray;
 }
-html { background: var(--bgcolor) }
 body {
     color: var(--font-color);
     font-size: 16px;
-    font-family: Palatino, palatino linotype, palatino lt std, latin modern roman, source-han-serif-sc, 'source han serif sc', 'source han serif cn', 'source han serif tc', 'source han serif tw', 'source han serif', 'noto serif cjk sc', songti sc,microsoft yahei, serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     max-width: 800px;
     margin: 15px auto;
     padding: 20px 40px;
-    border: lightgray solid 1px;
-    background: var(--bgcolor);
-    box-shadow: 0 0 10px lightgray;
+    border: var(--border-color) solid 1px;
+    box-shadow: 0 0 .5em var(--border-color);
     box-sizing: border-box;
 }
 h1 { font-size: 1.5em }
@@ -27,13 +23,12 @@ li { line-height: 1.5em }
 ul li { list-style-type: square; }
 p { line-height: 1.75em; margin: 1em 0; }
 p > code {
-    color: var(--bgcolor);
+    color: #eee;
     background: var(--font-color);
     padding: 1px 2px;
     font-family: "Lucida Console", Courier, monospace;
 }
 table td, th {
-    background: var(--light-bgcolor);
     border: var(--border-color) solid 1px;
 }
 pre {
@@ -43,9 +38,7 @@ pre {
 }
 blockquote {
     color: var(--light-font-color);
-    font-family: palatino linotype, book antiqua,Palatino, stkaiti, kaiti, 楷体, simkai, dfkai-sb, nsimsun, serif;
     padding: .1px 1em;
-    background: var(--light-bgcolor);
     border: var(--border-color) solid 1px;
 }
 img {
@@ -75,7 +68,7 @@ footer {
     width: 100%;
 }
 .summary-title {
-    background: lightgray;
+    background: var(--border-color);
     border-left: gray solid 4px;
     padding-left: 6px; 
 }
