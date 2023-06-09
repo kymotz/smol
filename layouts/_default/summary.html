@@ -1,16 +1,24 @@
 <article>
     <h2 class="summary-title">{{ .Title }}</h2>
-    <div>
-        <time><i>{{ .Date.Format (default "01.02.2006 15:04" .Site.Params.dateFmt) }}</i></time>
-        {{ range .Params.tags }}
-            <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">#{{ . }}</a>
-        {{ end }}
-    </div>
-    <div>
+    <div class="summary-content">
+        <div>
         {{ if .Params.banner }} <img style="max-width: 256px; max-height: 126px; float: right;margin: 0 0 1em 1em;" src="{{ .Params.banner }}" alt="image"/>{{ end }}
         {{ .Summary }}
+        </div>
+        <div class="summary-footer">
+            <div style="color: gray; font-style: italic; ">
+                发布于 <time>{{ .Date.Format (default "01.02.2006 15:04" .Site.Params.dateFmt) }}</time>
+                {{ range .Params.tags }}
+                <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">#{{ . }}</a>
+                {{ end }}
+            </div>
+            <div>
+                {{ if or .Truncated .Params.summary }}
+                <a href="{{ .Permalink }}">✨ 阅读全文 <b>·</b> {{ .Title }}</a>
+                {{ end }}
+            </div>
+        </div>
+        
+        
     </div>
-    {{ if or .Truncated .Params.summary }}
-        <p style="text-align: right;"><a href="{{ .Permalink }}">&raquo; 阅读全文 <b>·</b> {{ .Title }}</a></p>
-    {{ end }}
 </article>

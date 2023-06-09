@@ -1,9 +1,9 @@
 <header>
     <nav>
-        <a href="{{ .Site.BaseURL }}"><strong>{{ .Site.Title }}</strong></a> 
+        <a href="{{ .Site.BaseURL }}"><strong>首页</strong></a> 
         {{ with .Site.Menus.main }}
             {{ range . }}
-            <b> · </b> <a href="{{ .URL | relURL }}"><strong>{{ .Name }}</strong></a> 
+            &nbsp;<a href="{{ .URL | relURL }}"><strong>{{ .Name }}</strong></a> 
             {{ end }}
         {{ end }}
         {{ if .Site.Params.subtitle }} <div style="float: right;">{{ .Site.Params.subtitle }}</div>{{ end }}
