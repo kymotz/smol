@@ -3,7 +3,7 @@
     <div class="summary-content">
         <div>
         {{ if .Params.banner }} <img style="max-width: 256px; max-height: 126px; float: right;margin: 0 0 1em 1em;" src="{{ .Params.banner }}" alt="image"/>{{ end }}
-        {{ .Summary }}
+        <p> {{ .Summary }} </p>
         </div>
         <div class="summary-footer">
             <div style="color: gray; font-style: italic; ">
@@ -14,7 +14,7 @@
             </div>
             <div>
                 {{ if or .Truncated .Params.summary }}
-                <a href="{{ .Permalink }}">✨ 阅读全文 <b>·</b> {{ .Title }}</a>
+                <a href="{{ .Permalink }}">✨ 阅读更多</a>
                 {{ end }}
             </div>
         </div>

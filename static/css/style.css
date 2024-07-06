@@ -25,17 +25,20 @@ a:link { color: blue; text-decoration: none; }
 a:visited { text-decoration: none; }
 a:hover { color: white; text-decoration: none; background: blue; }
 a:active { color: white; text-decoration: none; background: orange; }
-li { line-height: 1.5em }
 ul li { list-style-type: square; }
-p { line-height: 1.75em; margin: 1em 0; }
 p > code {
     color: #eee;
     background: var(--font-color);
     padding: 1px 2px;
     font-family: "Lucida Console", Courier, monospace;
 }
-table td, th {
-    border: var(--border-color) solid 1px;
+table tr td, th {
+    background-color: white;
+    padding: 0.2em .4em;
+}
+table {
+    background-color: var(--light-font-color);
+    border-spacing: 0.1em;
 }
 pre {
     padding: 1em;
@@ -81,7 +84,7 @@ article .summary-title {
 article .summary-content{
     padding: .1em 1em 1em 1em;
     background: whitesmoke;
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
 }
 article .summary-title {
     margin-bottom: 0;
