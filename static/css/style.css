@@ -38,7 +38,7 @@ table tr td, th {
 }
 table {
     background-color: var(--light-font-color);
-    border-spacing: 0.1em;
+    border-spacing: 1.6px;
 }
 pre {
     padding: 1em;
