@@ -6,7 +6,7 @@
         <p> {{ .Summary }} </p>
         </div>
         <div class="summary-footer">
-            <div style="color: gray; font-style: italic; ">
+            <div style="color: gray;font-style: italic;">
                 发布于 <time>{{ .Date.Format (default "01.02.2006 15:04" .Site.Params.dateFmt) }}</time>
                 {{ range .Params.tags }}
                 <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">#{{ . }}</a>
@@ -14,11 +14,9 @@
             </div>
             <div>
                 {{ if or .Truncated .Params.summary }}
-                <a href="{{ .Permalink }}">✨ 阅读更多</a>
+                <a href="{{ .Permalink }}">阅读全文《{{ .Title }}》</a>
                 {{ end }}
             </div>
         </div>
-        
-        
     </div>
 </article>

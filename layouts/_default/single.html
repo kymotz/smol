@@ -2,17 +2,13 @@
 <main>
     <article id="art">
         {{ if .Params.banner }} <img loading="lazy" style="max-height: 256px;padding: 1em 1em" src="{{ .Params.banner }}"/> {{ end }}
-        <h1>{{ .Title }}</h1>
+        <h2>{{ .Title }}</h2>
         <time>{{ .Date.Format (default "01.02.2006" .Site.Params.dateFmt) }}</time>
         {{ range .Params.tags }}
             <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">#{{ . }}</a>
         {{ end }}
-        <span style="float: right;">
-            {{ if .Params.updated }}<span>[更新日期 {{ time.Format ("2006/01/02") .Params.updated }}]</span>{{ end }}
-            <span>
-            [字体 <a href="javascript:void(0)" onclick="document.getElementById('art').style.fontSize='14px'"><b>小</b></a>·<a href="javascript:void(0)" onclick="document.getElementById('art').style.fontSize='16px'">中</a>·<a href="javascript:void(0)" onclick="document.getElementById('art').style.fontSize='20px'">大</a>]
-            </span>
-            
+        <span style="float: right">
+            {{ if .Params.updated }}<span>[最近编辑 {{ time.Format ("2006/01/02") .Params.updated }}]</span>{{ end }}
         </span>
         <hr>
         {{ if .Params.toc }}
@@ -22,16 +18,17 @@
                 <hr>
             </aside>
         {{ end }}   
-        <div>
+        <div class="article-content">
             {{ .Content }}
         </div>
     </article>
-    <p>
-        <hr>博客没有评论系统，可以通过 <a href="javascript:(function(){location.href=decodeURIComponent(escape(window.atob('{{ print "mailto:" .Site.Params.email "?subject=【" .Site.Title "】" .Title | base64Encode}}')))})()">邮件</a> 评论和交流。
-        {{ if and (gt .WordCount 600) (eq .Params.type "posts") }}
-            <a href="#body" style="float: right;">Top&uarr;</a> 
-        {{ end }}
-    </p>
+    <hr>
+    {{ if and (gt .WordCount 600) (eq .Params.type "posts") }}
+    <a href="#body" style="float: right;">Top&uarr;</a> 
+    {{ end }}
+    {{ partial "sidebar.html" . }}
+    <!-- 博客没有评论系统，可以通过 <a href="javascript:(function(){location.href=decodeURIComponent(escape(window.atob('{{ print "mailto:" .Site.Params.email "?subject=【" .Site.Title "】" .Title | base64Encode}}')))})()">邮件</a> 评论和交流。 -->
+    <!-- comment -->
+    {{ template "_internal/disqus.html" . }}
 </main>
-{{ partial "sidebar.html" . }}
 {{ end }}

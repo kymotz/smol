@@ -1,5 +1,6 @@
 <header>
-    <nav>
+    <h1>{{.Site.Title}}</h1>
+    <nav style="text-align: left;">
         <a href="{{ .Site.BaseURL }}"><strong>首页</strong></a> 
         {{ with .Site.Menus.main }}
             {{ range . }}
